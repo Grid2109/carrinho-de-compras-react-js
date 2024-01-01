@@ -14,8 +14,13 @@ function CartItem( {data} ) {
   const  { cartItems, setCartItems } = useContext(AppContext);
   const { id, thumbnail, title , price} = data;
   const handleRemoveItem = () => {
-    const updatedItems = cartItems.filter((item) => item.id != id);
-    setCartItems(updatedItems);
+    const indexToRemove = cartItems.findIndex(item => item.id === id);
+
+    if (indexToRemove !== -1) {
+      const updatedItems = [...cartItems];
+      updatedItems.splice(indexToRemove, 1);
+      setCartItems(updatedItems);
+    }
   };
 
   return(
