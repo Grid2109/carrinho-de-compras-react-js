@@ -16,9 +16,11 @@ function CartItem( {data} ) {
   const handleRemoveItem = () => {
     const indexToRemove = cartItems.findIndex(item => item.id === id);
 
+
     if (indexToRemove !== -1) {
       const updatedItems = [...cartItems];
       updatedItems.splice(indexToRemove, 1);
+   
       setCartItems(updatedItems);
     }
   };
@@ -47,8 +49,9 @@ function CartItem( {data} ) {
   );
 }
 
-export default CartItem;
-
 CartItem.propTypes = {
   data: propTypes.object
 }.isRequired;
+
+export default CartItem;
+
