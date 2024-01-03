@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import propTypes from 'prop-types';
-
-
 import { BsCartDashFill } from 'react-icons/bs';
 
 import './CartItem.css';
@@ -36,7 +34,7 @@ function CartItem( {data} ) {
       <div className='cart-item-content'>
         <h3 className='cart-item-title'>{title}</h3>
         <h3 className='cart-item-price'> {formatCurrency(price, 'BRL')}</h3>
-        <h3>{quantity}</h3>
+        <h3 className='cart-item-quantity'>{quantity}</h3>
         <button
           type='button'
           className='button__remove-itens'

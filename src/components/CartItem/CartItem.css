@@ -27,6 +27,11 @@
   font-weight: 500;
 }
 
+.cart-item-quantity{
+  font-size: 14px;
+  font-weight: 300;
+}
+
 
 .button__remove-itens {
  position: absolute;
