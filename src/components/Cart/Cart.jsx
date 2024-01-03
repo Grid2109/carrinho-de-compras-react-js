@@ -8,7 +8,7 @@ import formatCurrency from '../../utils/formatCurrency';
 function Cart() {
   const { cartItems, isCartVisible } = useContext(AppContext);
 
-  const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0);
+  const totalPrice = cartItems.reduce((acc, item) => item.price * item.quantity + acc, 0);
 
   return (
     <section className={`cart ${isCartVisible ? 'cart--active' : ''}`}>
